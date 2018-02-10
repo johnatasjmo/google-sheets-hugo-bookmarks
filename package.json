@@ -1,0 +1,15 @@
+{
+  "name": "bookmarks-crgeary-com",
+  "private": true,
+  "scripts": {
+    "get:bookmarks": "node scripts/index.js"
+  },
+  "author": "Christopher Geary",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^3.0.0",
+    "google-spreadsheet": "^2.0.4",
+    "js-yaml": "^3.10.0",
+    "mkdirp": "^0.5.1"
+  }
+}

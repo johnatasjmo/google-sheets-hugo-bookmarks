@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+        {{ .Hugo.Generator }}
+
+        <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
+
+        {{ if .RSSLink }}
+            <link href="{{ .RSSLink }}" title="{{ .Site.Title }}" type="application/rss+xml" rel="alternate">
+        {{ end }}
+
+    </head>
+    <body>
+
+        <main class="site-main" role="main">
+
+            {{ block "main" . }}{{ end }}
+
+        </main>
+
+    </body>
+</html>
