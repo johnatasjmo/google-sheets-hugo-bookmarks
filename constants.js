@@ -5,7 +5,7 @@ module.exports = {
     spreadsheet: {
         id: process.env.GOOGLE_SHEETS_ID,
         auth: {
-            private_key: process.env.GOOGLE_SHEETS_KEY,
+            private_key: process.env.GOOGLE_SHEETS_KEY.replace(/\\n/g, '\n'),
             client_email: process.env.GOOGLE_SHEETS_EMAIL
         }
     },
