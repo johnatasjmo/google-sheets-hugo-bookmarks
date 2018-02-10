@@ -4,7 +4,6 @@ const mkdirp = require('mkdirp');
 const path = require('path');
 
 module.exports = function createBookmark (_path, data, content) {
-    console.log('createBookmark')
     let fontmatter = `---\n${yaml.safeDump(data, { lineWidth: 999 }).trim()}\n---\n\n`;
     mkdirp(path.dirname(_path), (err) => {
         if (err) {
