@@ -11,6 +11,9 @@ removeBookmarks()
         const sheet = new spreadsheet(constants.spreadsheet.id);
 
         sheet.useServiceAccountAuth(constants.spreadsheet.auth, function (err) {
+            if (err) {
+                throw err;
+            }
             sheet.getRows(1, function (err, rows) {
                 rows.forEach(row => {
                     createBookmark(

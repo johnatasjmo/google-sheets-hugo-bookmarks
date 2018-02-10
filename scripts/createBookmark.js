@@ -3,7 +3,8 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const path = require('path');
 
-module.exports = function createPost (_path, data, content) {
+module.exports = function createBookmark (_path, data, content) {
+    console.log('createBookmark')
     let fontmatter = `---\n${yaml.safeDump(data, { lineWidth: 999 }).trim()}\n---\n\n`;
     mkdirp(path.dirname(_path), (err) => {
         if (err) {
