@@ -19,7 +19,7 @@ removeBookmarks()
                     createBookmark(
                         path.resolve(constants.paths.bookmarks, `${md5(row.src)}.md`), {
                             src: row.src,
-                            type: row.type,
+                            content_type: row.type,
                             tags: row.tags.split(',').map(r => r.trim())
                         },
                         row.content || ''

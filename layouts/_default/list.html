@@ -4,7 +4,6 @@
         {{ range .Paginator.Pages }}
             <li>
                 <a href="{{ .Params.src }}">{{ .Params.src }}</a>
-                {{ with .Params.type }}<span>({{ . }})</span>{{ end }}
             </li>
         {{ end }}
     </ul>
