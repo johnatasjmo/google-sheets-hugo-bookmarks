@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 25px;
+}
+
+a {
+    color: #777777;
+    text-decoration-color: #dddddd;
+}
+
+.bookmark {
+    margin-bottom: 10px;
+    display: flex;
+}
+.bookmark__icon {
+    margin-right: 10px;
+}
+.bookmark__icon img {
+    vertical-align: middle;
+}
+.bookmark__src {
+    color: #000000;
+    font-weight: bold;
+}
+.bookmark__tags {
+    font-size: 12px;
+    padding-left: 0;
+    margin: 0;
+}
+.bookmark__tags li {
+    display: inline-block;
+    list-style: none;
+}
+
+.pagination {
+    padding-left: 0;
+    margin: 30px 0;
+}
+.pagination > li {
+    display: inline-block;
+}
+.pagination > li > a {
+    display: block;
+    padding: 5px;
+}
+
+h1 small {
+    color: #777777;
+    font-size: 70%;
+}

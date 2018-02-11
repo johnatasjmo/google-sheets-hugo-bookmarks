@@ -2,4 +2,4 @@ baseURL = "/"
 languageCode = "en-gb"
 title = "Bookmarks"
 
-paginate = 50
+paginate = 25

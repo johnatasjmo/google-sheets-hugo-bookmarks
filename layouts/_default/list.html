@@ -1,12 +1,29 @@
 {{ define "main" }}
     
-    <ul>
-        {{ range .Paginator.Pages }}
-            <li>
-                <a href="{{ .Params.src }}">{{ .Params.src }}</a>
-            </li>
-        {{ end }}
-    </ul>
+    {{ if .Section }}
+        <a href="{{ .Site.BaseURL }}">&laquo; All Bookmarks</a>
+        <h1>{{ .Site.Title }} <small>({{ .Title }})</small></h1>
+    {{ else }}
+        <h1>{{ .Site.Title }}</h1>
+    {{ end }}
+    
+    {{ range .Paginator.Pages }}
+        <div class="bookmark">
+            <div class="bookmark__icon">
+                <img src="https://www.google.com/s2/favicons?domain={{ .Params.src }}">
+            </div>
+            <div class="bookmark__body">
+                <a class="bookmark__src" href="{{ .Params.src }}">{{ .Params.src }}</a>
+                {{ with .Params.tags }}
+                    <ul class="bookmark__tags">
+                        {{ range . }}
+                            <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
 
     {{ template "_internal/pagination.html" . }}
 
