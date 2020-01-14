@@ -9,7 +9,7 @@
   "dependencies": {
     "del": "^3.0.0",
     "google-spreadsheet": "^2.0.4",
-    "js-yaml": "^3.10.0",
+    "js-yaml": "^3.13.1",
     "mkdirp": "^0.5.1"
   }
 }
